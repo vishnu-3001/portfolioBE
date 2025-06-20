@@ -1,4 +1,7 @@
 package com.vishnu.repository;
 
-public class PortfolioRepository{}    
+
+public class PortfolioRepository{
+
+}    
 
