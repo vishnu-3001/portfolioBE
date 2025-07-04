@@ -1,23 +1,17 @@
 package com.vishnu.portfolio_backend;
 
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+import org.springframework.context.annotation.ComponentScan;
 
-import com.vishnu.service.ExperienceService;
-
-@SpringBootApplication(scanBasePackages = "com.vishnu")
+@SpringBootApplication
+@ComponentScan(basePackages = "com.vishnu")
+@EnableJpaRepositories(basePackages = "com.vishnu.repository")
+@EntityScan(basePackages = "com.vishnu.model")
 public class PortfolioBackendApplication {
-
-	public static void main(String[] args) {
-		SpringApplication.run(PortfolioBackendApplication.class, args);
-	}
-	@Bean
-    CommandLineRunner run(ExperienceService service) {
-        return args -> {
-            service.saveExperience();
-        };
+    public static void main(String[] args) {
+        SpringApplication.run(PortfolioBackendApplication.class, args);
     }
-
 }
