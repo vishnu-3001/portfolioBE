@@ -23,7 +23,7 @@ public class Experience {
 
     @ElementCollection
     @CollectionTable(name = "experience_description", joinColumns = @JoinColumn(name = "experience_id"))
-    @Column(name = "description")
+    @Column(name = "description",columnDefinition = "TEXT")
     private List<String> description;
 
 

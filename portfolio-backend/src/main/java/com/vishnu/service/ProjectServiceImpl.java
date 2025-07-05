@@ -1,10 +1,12 @@
 package com.vishnu.service;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.vishnu.model.*;
 import com.vishnu.repository.*;
 import java.util.*;
 
+@Service
 public class ProjectServiceImpl implements ProjectService {
     
     @Autowired

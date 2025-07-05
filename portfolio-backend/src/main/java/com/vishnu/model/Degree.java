@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 import java.util.*;
 
 @Entity
-@Table(name="Degree")
+@Table(name="degrees")
 public class Degree {
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -59,7 +59,7 @@ public class Degree {
     @ElementCollection
     @CollectionTable(name="degree_courses",joinColumns = @JoinColumn(name="degree_id"))
     @Column(name="course")
-    private List<String>courses;
+    private List<String>courses=new ArrayList<>();
 
     public List<String> getCourses() {
         return courses;
