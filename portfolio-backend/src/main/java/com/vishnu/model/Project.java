@@ -28,6 +28,7 @@ public class Project {
         this.title = title;
     }
 
+    @Column(columnDefinition = "TEXT")
     private String description;
 
     public String getDescription() {
